@@ -1,4 +1,4 @@
-const addbtn = document.querySelector('.add-btn');
+const form = document.querySelector('.form-container');
 const inputEl = document.querySelector('.input');
 const taskContainer = document.querySelector('.task-container');
 
@@ -6,8 +6,10 @@ let id = 0;
 let tasks = [];
 
 
-addbtn.addEventListener('click', ()=>{
+form.addEventListener('submit', (e)=>{
 
+    e.preventDefault();
+    
     const text = inputEl.value.trim();
     if(text === "") return 
 
